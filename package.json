@@ -1,0 +1,38 @@
+{
+  "name": "laravel-blade-jade",
+  "version": "1.0.0-4",
+  "description": "Create laravel blade views using jade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "blade",
+    "jade"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iGuntur/laravel-blade-jade"
+  },
+  "author": {
+    "name": "Guntur Poetra"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-remove-empty-lines": "^0.0.4",
+    "jstransformer": "^1.0.0",
+    "jstransformer-marked": "^1.0.1",
+    "jstransformer-verbatim": "^1.0.0",
+    "lodash": "^4.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-9"
+  }
+}
