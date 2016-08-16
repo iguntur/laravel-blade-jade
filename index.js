@@ -23,7 +23,7 @@ Elixir.extend('blade', function(options) {
     let overrides = options || {};
 
     overrides.basedir = overrides.basedir || overrides.sourcePath || Elixir.config.blade.basedir || Elixir.config.blade.sourcePath;
-    config = _.merge(Elixir.config.blade, overrides);
+    let config = _.merge(Elixir.config.blade, overrides);
 
     let paths = getPaths(config.sourcePath, config.outputPath);
 
