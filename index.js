@@ -20,24 +20,24 @@ require('./config');
  */
 
 Elixir.extend('blade', function(options) {
-    options = options || {};
+    overrides = options || {};
 
-    options.basedir = options.basedir || options.sourcePath || Elixir.config.blade.basedir || Elixir.config.blade.sourcePath;
-    options = _.merge(Elixir.config.blade, options);
+    overrides.basedir = overrides.basedir || overrides.sourcePath || Elixir.config.blade.basedir || Elixir.config.blade.sourcePath;
+    config = _.merge(Elixir.config.blade, overrides);
 
-    let paths = getPaths(options.sourcePath, options.outputPath);
+    let paths = getPaths(config.sourcePath, config.outputPath);
 
     new Elixir.Task('blade', function() {
         return (
             gulp
             .src(paths.src.path)
-            .pipe($.jade(options))
+            .pipe($.jade(config))
             .on('error', function(e) {
                 new Elixir.Notification().error(e, ' Views Compilation Failed');
                 this.emit('end');
             })
             .pipe($.removeEmptyLines())
-            .pipe($.prettify(options.prettify))
+            .pipe($.if(config.pretty, $.prettify(config.prettify)))
             .pipe($.extReplace('.blade.php'))
             .pipe(gulp.dest(paths.output.path))
             .pipe(new Elixir.Notification('Blade Views Compiled!'))
