@@ -20,8 +20,11 @@ require('./config');
  */
 
 Elixir.extend('blade', function(options) {
+    options = options || {};
+
     options.basedir = options.basedir || options.sourcePath || Elixir.config.blade.basedir || Elixir.config.blade.sourcePath;
     options = _.merge(Elixir.config.blade, options);
+
     let paths = getPaths(options.sourcePath, options.outputPath);
 
     new Elixir.Task('blade', function() {
