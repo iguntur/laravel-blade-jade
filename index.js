@@ -20,7 +20,7 @@ require('./config');
  */
 
 Elixir.extend('blade', function(options) {
-    overrides = options || {};
+    let overrides = options || {};
 
     overrides.basedir = overrides.basedir || overrides.sourcePath || Elixir.config.blade.basedir || Elixir.config.blade.sourcePath;
     config = _.merge(Elixir.config.blade, overrides);
