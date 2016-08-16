@@ -28,7 +28,7 @@ Elixir(function(mix) {
     // ...
 
 });
-````
+```
 
 ## Basic Usage
 
