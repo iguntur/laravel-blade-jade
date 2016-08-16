@@ -1,6 +1,6 @@
 {
   "name": "laravel-blade-jade",
-  "version": "1.0.0-4",
+  "version": "1.0.0-5",
   "description": "Create laravel blade views using jade",
   "main": "index.js",
   "scripts": {
