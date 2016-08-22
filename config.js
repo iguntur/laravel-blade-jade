@@ -21,7 +21,7 @@ var config = {
 
         // https://www.npmjs.com/package/gulp-jade
         locals: {},
-        
+
         /**
          |----------------------------------------------------------------
          | Basedir
