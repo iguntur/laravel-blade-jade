@@ -4,8 +4,8 @@ var p = require('path');
 var _ = require('lodash');
 var $ = require('gulp-load-plugins')();
 var Elixir = require('laravel-elixir');
+var bladeJs = require('bladejs-core');
 
-require('./lib/compiler')();
 require('./config');
 
 
@@ -36,8 +36,6 @@ Elixir.extend('blade', function(options) {
                 new Elixir.Notification().error(e, ' Views Compilation Failed');
                 this.emit('end');
             })
-            .pipe($.removeEmptyLines())
-            .pipe($.if(config.pretty, $.prettify(config.prettify)))
             .pipe($.extReplace('.blade.php'))
             .pipe(gulp.dest(paths.output.path))
             .pipe(new Elixir.Notification('Blade Views Compiled!'))
