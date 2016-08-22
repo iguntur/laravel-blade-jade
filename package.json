@@ -1,6 +1,6 @@
 {
   "name": "laravel-blade-jade",
-  "version": "1.0.0-6",
+  "version": "2.0.0",
   "description": "Create laravel blade views using jade",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "laravel",
     "elixir",
     "blade",
-    "jade"
+    "jade",
+    "html"
   ],
   "repository": {
     "type": "git",
@@ -34,6 +35,6 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "laravel-elixir": "^6.0.0-9"
+    "laravel-elixir": "^6.0.0-10"
   }
 }
