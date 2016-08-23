@@ -1,0 +1,18 @@
+ul(data-foo="bar")
+    @foreach($lists as $list)
+    li.foo.bar.baz
+        a(href!="{{ route($list->url) }}") {{ $list }}
+    @endforeach
+
+div#Text {{ $name or "default" }}
+
+div#Tag
+    {{ $name or "default" }}
+
+#Blade.echos
+    p.raw
+        {{{ $raw() }}}
+    p.escaped
+        {{ $escaped or "default" }}
+    p.unescaped
+        {!! $unescaped !!}

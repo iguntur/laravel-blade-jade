@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title @yield('title')
+    body
+        @include("partials.foo-bar", ['key' => 'val'])
+
+        @section('sidebar')
+            sidebar.master
+                p This is the master sidebar.
+        @stop
+
+        .container: .row
+            @yield('content')

@@ -2,10 +2,14 @@
 
 Create laravel blade views using jade
 
+## Changelog
+
+- use reference original language
+
 ## Install
 
 ``` bash
-npm install --save-dev laravel-blade-jade
+$ npm install --save-dev laravel-blade-jade
 ```
 
 ``` javascript
@@ -26,33 +30,34 @@ Elixir(function(mix) {
     });
 
     // ...
-
 });
 ```
 
 ## Basic Usage
 
+Trigger
+
 ``` bash
-gulp blade
+$ gulp blade
 ```
 
-input
 ``` html
-// index.jade 
+// index.jade
 
 doctype html
 html
     head
-        title= $title
-
+        title @yield('title')
     body
-        .container
-            h1!= 'welcome, ' . $name . '!'
+        @include("partials.foo-bar", ['key' => 'val'])
 
-            ul
-                - foreach($this->list as $list)
-                li {{ $list }}
-                - endforeach
+        @section('sidebar')
+            sidebar.master
+                p This is the master sidebar.
+        @stop
+
+        .container: .row
+            @yield('content')
 ```
 
 output
@@ -63,16 +68,19 @@ output
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ $title }}</title>
+        <title>@yield('title')</title>
     </head>
     <body>
+        @include("partials.foo-bar", ['key' => 'val'])
+        @section('sidebar')
+            <sidebar class="master">
+                <p>This is the master sidebar.</p>
+            </sidebar>
+        @stop
         <div class="container">
-            <h1>{!! 'welcome, ' . $name . '!' !!}</h1>
-            <ul>
-                @foreach($this->list as $list)
-                <li>{{ $list }}</li>
-                @endforeach
-            </ul>
+            <div class="row">
+                @yield('content')
+            </div>
         </div>
     </body>
 </html>
@@ -86,23 +94,24 @@ output
 All options supported by the [Jade API](http://jade-lang.com/api/) are supported
 
 ```
-sourcePath: <string> | <null>
+sourcePath
+type: <string> | <null>
 default: "resources/assets/blade"
 
-outputPath: <string> | <null>
+outputPath
+type: <string> | <null>
 default: "resources/views"
 
-basedir: <string> | <null>
+basedir
+type: <string> | <null>
 default: null == sourcePath
 
-locals: <object>
-default: {}
+locals
+type: <object>
+default: (empty) {}
 
-pretty: <boolean>
+pretty: <boolean> | <string>
 default: true
-
-prettify: <object>
-default: // https://www.npmjs.com/package/gulp-prettify
 ```
 
 
@@ -110,7 +119,13 @@ default: // https://www.npmjs.com/package/gulp-prettify
 
 Documentation for Elixir can be found on the [Laravel website](http://laravel.com/docs/elixir).
 
+Documentation for Jade can be found on the [Jade website](http://jade-lang.com).
+
 Documentation for Elixir repositories can be found on the [Github](https://github.com/laravel/elixir)
+
+## Note
+
+If you using `version 1.0` please check [basic usage](https://github.com/iGuntur/laravel-blade-jade/blob/1.0/readme.md#basic-usage)
 
 ## License
 MIT License
