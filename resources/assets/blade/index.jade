@@ -1,0 +1,35 @@
+@extends('layout.app')
+@section('title', 'Home')
+
+@section('sidebar')
+    @parent
+
+    p This is appended to the master sidebar
+@endsection
+
+@section('content')
+    // HTML Comments
+    .col-md-6
+        h1 Heading
+        @if(Auth::user())
+            ul(data-foo="bar")
+                @foreach($lists as $list)
+                li= $list
+                @endforeach
+        @else
+            h2 BarBazQuux
+        @endif
+
+    //- Blade Comments
+    .col-md-6
+        h1 Heading 2
+        .wrapper
+            section(data-for="bar")
+                ul
+                    li foo
+                    li bar
+            section(data-for="foo")
+                ul
+                    li baz
+                    li quux
+@endsection
