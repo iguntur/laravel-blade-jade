@@ -93,22 +93,27 @@ All options supported by the [Jade API](http://jade-lang.com/api/) are supported
 
 ### sourcePath
 type: <string> | <null>
+
 default: "resources/assets/blade"
 
 ### outputPath
 type: <string> | <null>
+
 default: "resources/views"
 
 ### basedir
 type: <string> | <null>
+
 default: null == sourcePath
 
 ### locals
 type: <object>
+
 default: (empty) {}
 
 ### pretty
 type: <boolean> | <string>
+
 default: true
 
 
