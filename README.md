@@ -110,7 +110,6 @@ default: (empty) {}
 ### pretty
 type: <boolean> | <string>
 default: true
-```
 
 
 ## Official Documentation
