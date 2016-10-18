@@ -92,28 +92,28 @@ output
 All options supported by the [Jade API](http://jade-lang.com/api/) are supported
 
 ### sourcePath
-type: <string> | <null>
 
+type: `string`, `null` <br>
 default: "resources/assets/blade"
 
 ### outputPath
-type: <string> | <null>
 
+type: `string`, `null` <br>
 default: "resources/views"
 
 ### basedir
-type: <string> | <null>
 
+type: `string`, `null` <br>
 default: null == sourcePath
 
 ### locals
-type: <object>
 
+type: `object` <br>
 default: (empty) {}
 
 ### pretty
-type: <boolean> | <string>
 
+type: `boolean`, `string` <br>
 default: true
 
 
