@@ -141,4 +141,4 @@ If you using `version 1.0` please check [docs](https://github.com/iGuntur/larave
 
 ## License
 
-MIT @ [Guntur Poetra](guntur.starmediateknik.com)
+MIT @ [Guntur Poetra](http://guntur.starmediateknik.com)
