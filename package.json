@@ -2,7 +2,10 @@
   "name": "laravel-blade-jade",
   "version": "2.0.0",
   "description": "Create laravel blade views using jade",
-  "main": "index.js",
+  "files": [
+    "index.js",
+    "config.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +18,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iGuntur/laravel-blade-jade"
+    "url": "iguntur/laravel-blade-jade"
   },
   "author": {
-    "name": "Guntur Poetra"
+    "name": "Guntur Poetra",
+    "email": "poetra.guntur@gmail.com",
+    "url": "guntur.starmediateknik.com"
   },
   "license": "MIT",
   "dependencies": {
