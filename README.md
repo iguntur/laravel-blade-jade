@@ -5,18 +5,18 @@
 
 ## Install
 
-```bash
+``` bash
 $ npm install --save-dev laravel-blade-jade
 ```
 
-```js
+``` js
 // Gulpfile.js
 
-const Elixir = require('laravel-elixir');
+const elixir = require('laravel-elixir');
 
 require('laravel-blade-jade');
 
-Elixir(mix => {
+elixir(mix => {
 
     /**
      * Blade Views
@@ -31,7 +31,7 @@ Elixir(mix => {
 ```
 
 
-## Basic Usage
+## Usage
 
 Trigger
 
@@ -39,7 +39,7 @@ Trigger
 $ gulp blade
 ```
 
-``` html
+``` js
 // index.jade
 
 doctype html
@@ -57,8 +57,6 @@ html
         .container: .row
             @yield('content')
 ```
-
-output
 
 ``` html
 <!-- index.blade.php -->
@@ -89,47 +87,58 @@ output
 
 ## API
 
+### mix.blade(options)
+
+
+#### options
+
+Type: `object`
+
 All options supported by the [Jade API](http://jade-lang.com/api/) are supported
 
-### sourcePath
+##### sourcePath
 
-type: `string`, `null` <br>
-default: "resources/assets/blade"
+Type: `string`, `null` <br>
+Default: `"resources/assets/blade"`
 
-### outputPath
+##### outputPath
 
-type: `string`, `null` <br>
-default: "resources/views"
+Type: `string`, `null` <br>
+Default: `"resources/views"`
 
-### basedir
+##### basedir
 
-type: `string`, `null` <br>
-default: null == sourcePath
+Type: `string`, `null` <br>
+Default: `null`
 
-### locals
+##### locals
 
-type: `object` <br>
-default: (empty) {}
+Type: `object` <br>
+Default: `{}`
 
-### pretty
+##### pretty
 
-type: `boolean`, `string` <br>
-default: true
-
-
-## Official Documentation
-
-Documentation for Elixir can be found on the [Laravel website](http://laravel.com/docs/elixir).
-
-Documentation for Jade can be found on the [Jade website](http://jade-lang.com).
-
-Documentation for Elixir repositories can be found on the [Github](https://github.com/laravel/elixir)
+Type: `boolean`, `string` <br>
+Default: `true`
 
 
-### Note
+## Official Documentations
+
+- Documentation for Elixir can be found on the [Laravel website](http://laravel.com/docs/elixir).
+- Documentation for Jade can be found on the [Jade website](http://jade-lang.com).
+- Documentation for Elixir repositories can be found on the [Github](https://github.com/laravel/elixir)
+
+
+### Notes
 
 If you using `version 1.0` please check [docs](https://github.com/iGuntur/laravel-blade-jade/blob/1.0/readme.md#basic-usage)
 
-# License
+
+## Related
+
+- [bladejs-core](https://github.com/iguntur/bladejs-core) - API for this module
+
+
+## License
 
 MIT @ [Guntur Poetra](guntur.starmediateknik.com)
