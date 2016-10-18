@@ -27,14 +27,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bladejs-core": "0.0.1",
+    "bladejs-core": "^0.0.2",
     "gulp-ext-replace": "^0.3.0",
     "gulp-if": "^2.0.1",
     "gulp-jade": "^1.1.0",
     "jstransformer": "^1.0.0",
     "jstransformer-marked": "^1.0.1",
     "jstransformer-verbatim": "^1.0.0",
-    "lodash": "^4.14.1"
+    "lodash": "^4.16.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
